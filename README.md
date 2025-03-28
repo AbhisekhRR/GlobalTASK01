@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+EmployWise React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
+This is a React-based application that integrates with the Reqres API to perform basic user management functions. The application includes authentication, user listing, and functionalities to edit and delete users.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+Level 1: Authentication Screen
 
-### `npm start`
+Users can log in using the credentials:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Email: eve.holt@reqres.in
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Password: cityslicka
 
-### `npm test`
+On successful login, a token is stored and the user is redirected to the Users List Page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Level 2: List All Users
 
-### `npm run build`
+Fetches and displays a paginated list of users using GET /api/users?page=1.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Users are shown in a card/table format.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Implements pagination for navigating through different pages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Level 3: Edit, Delete, and Update Users
 
-### `npm run eject`
+Edit Users: Opens a form with pre-filled user data and allows updating of First Name, Last Name, and Email.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Delete Users: Removes a user from the list using DELETE /api/users/{id}.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Displays success/error messages based on API responses.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Frontend: React.js
 
-## Learn More
+State Management: useState, useEffect
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+API Calls: Axios
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Styling: CSS Modules
 
-### Code Splitting
+Routing: React Router
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation & Setup
 
-### Analyzing the Bundle Size
+1. Clone the repository: git clone https://github.com/AbhisekhRR/GlobalTASK01.git
+2. Navigate to the project folder: cd employwise-app
+3. Install dependencies: npm install
+4. Start the development server: npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+####  Project Structure
 
-### Making a Progressive Web App
+/employwise-app
+│── src
+│   │── components
+│   │   │── Login.js
+│   │   │── UsersList.js
+│   │   │── EditUser.js
+│   │   │── Login.css
+│   │   │── UsersList.css
+│   │   │── EditUser.css
+│   │── App.js
+│   │── index.js
+│── package.json
+│── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+###### Assumptions & Considerations
 
-### Advanced Configuration
+The application assumes a valid response from the Reqres API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Error handling has been implemented for API failures.
 
-### Deployment
+The UI is designed to be simple and responsive.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
